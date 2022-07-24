@@ -9,6 +9,10 @@
     <module name="AvoidStarImport" />
     <module name="FinalParameters" />
   </module>
-  <module name="LineLength" />
+  <module name="LineLength">
+    <property name="fileExtensions" value="java"/>
+    <property name="max" value="150"/>
+    <property name="ignorePattern" value="^package.*|^import.*|^get.*|^set.*|a href|href|http://|https://|ftp://"/>
+  </module>
 
 </module>
