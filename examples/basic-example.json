@@ -1,0 +1,9 @@
+{
+    "name": "basic-example",
+    "config": {
+        "connector.class": "br.com.fec.FecConnect",
+        "topic.name": "topico",
+        "message.value": "#{Name.full_name}",
+        "tasks.max": "1"
+    }
+}
