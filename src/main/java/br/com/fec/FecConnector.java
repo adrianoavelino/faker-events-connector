@@ -13,8 +13,8 @@ import org.slf4j.LoggerFactory;
 import static br.com.fec.FecConfig.*;
 import java.util.*;
 
-public class FecConnect extends SourceConnector {
-    private final Logger log = LoggerFactory.getLogger(FecConnect.class);
+public class FecConnector extends SourceConnector {
+    private final Logger log = LoggerFactory.getLogger(FecConnector.class);
 
     private Map<String, String> originalProps;
     private FecConfig config;
