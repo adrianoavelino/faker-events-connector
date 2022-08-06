@@ -14,7 +14,7 @@ class FecConfigTest {
     void ShouldHaveDefaultValueForNonRequiredProperty() {
         Map<String, String> props = new HashMap<>();
         FecConfig config = new FecConfig(props);
-        String defaultValue = "Hello World!";
+        String defaultValue = "#{Name.full_name}";
         Assertions.assertEquals(defaultValue, config.getString(FecConfig.MESSAGE_VALUE));
     }
 
@@ -22,9 +22,9 @@ class FecConfigTest {
     @DisplayName("Should define the Value for non required property")
     void shouldDefineTheValueForNonRequiredProperty() {
         Map<String, String> props = new HashMap<>();
-        props.put(FecConfig.MESSAGE_VALUE, "my message");
+        props.put(FecConfig.MESSAGE_VALUE, "#{PhoneNumber.phoneNumber}");
         FecConfig config = new FecConfig(props);
-        Assertions.assertEquals("my message", config.getString(FecConfig.MESSAGE_VALUE));
+        Assertions.assertEquals("#{PhoneNumber.phoneNumber}", config.getString(FecConfig.MESSAGE_VALUE));
     }
 
 }
