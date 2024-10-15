@@ -1,4 +1,9 @@
 # faker-events-connector
+[![build-test](https://github.com/adrianoavelino/kafka-connect-lambda-localstack/actions/workflows/build-test.yml/badge.svg)](https://github.com/adrianoavelino/faker-events-connector/actions/workflows/build-test.yml)
+![GitHub top language](https://img.shields.io/github/languages/top/adrianoavelino/faker-events-connector)
+[![Repository size](https://img.shields.io/github/repo-size/adrianoavelino/faker-events-connector)](https://img.shields.io/github/repo-size/adrianoavelino/faker-events-connector)
+[![Last commit](https://img.shields.io/github/last-commit/adrianoavelino/faker-events-connector)](https://github.com/adrianoavelino/faker-events-connector/commits/master)
+
 Faker Events Connector é um Source Connector para o Kafka Connect que gera eventos fake para um  tópico Kafka.
 
 ## Comandos
