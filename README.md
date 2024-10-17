@@ -9,7 +9,7 @@ Faker Events Connector é um Source Connector para o Kafka Connect que gera even
 ## Comandos
 ```bash
 # cria os pacotes da aplicação
-mvn clean compile
+mvn clean package
 
 # inicia os containers
 docker-compose up -d
