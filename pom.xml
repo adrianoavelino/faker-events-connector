@@ -9,6 +9,7 @@
     <version>0.1.0</version>
 
     <properties>
+        <java.version>11</java.version>
         <connect.api.version>3.0.0</connect.api.version>
         <junit.jupiter.version>5.8.2</junit.jupiter.version>
         <java.faker.version>1.0.2</java.faker.version>
@@ -92,7 +93,7 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <inherited>true</inherited>
                 <configuration>
-                    <release>11</release>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
             <plugin>

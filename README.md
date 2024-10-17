@@ -6,29 +6,52 @@
 
 Faker Events Connector é um Source Connector para o Kafka Connect que gera eventos fake para um  tópico Kafka.
 
-## Comandos
+## Tecnologias
+- Java
+- Maven
+- Docker e docker-compose
+- Kafka
+
+## Começando
+Crie o jar do plugin:
 ```bash
-# cria os pacotes da aplicação
 mvn clean package
+```
 
-# inicia os containers
-docker-compose up -d
+Inicie os containers:
+```bash
+docker compose up -d
+```
 
-# lista os plugins instalados
+> [!NOTE]
+> Aguarde a incialização do serviço **connect**, se necessário execute `docker compose logs -f` para analisar os logs
+
+Liste os plugins instalados:
+```bash
 curl -X GET http://localhost:8083/connector-plugins
+```
+> [!WARNING]
+> Verifique a existência da classe `br.com.fec.FecConnector`
 
-# cria um conector
+Crie um conector:
+```bash
 curl -X POST -H "Content-Type:application/json" -d @examples/basic-example.json http://localhost:8083/connectors
+```
 
-# lista os conectores criados
+Liste os conectores criados:
+```bash
 curl -X GET http://localhost:8083/connectors
+```
 
-# lista os tópicos do kafka
-docker-compose exec kafka-topics describe --list \
---bootstrap-server kafka:29092
-
-# cria um consumer
-docker-compose exec kafka kafka-console-consumer \
+Crie um consumer para visualizar o eventos gerados pelo conector:
+```bash
+docker compose exec kafka kafka-console-consumer \
 --bootstrap-server kafka:9092 --topic topico --from-beginning \
 --property print.key=true --property print.value=true
+```
+
+Liste os tópicos kafka existentes, caso necessário:
+```bash
+docker compose exec kafka kafka-topics describe --list \
+--bootstrap-server kafka:29092
 ```
